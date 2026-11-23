@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <title>iPhone</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/os.css">
+  <link rel="stylesheet" href="css/apps.css">
+</head>
+<body data-state="locked">
+  <div id="stage">
+    <div id="device">
+      <button class="side-btn power" aria-label="측면 버튼"></button>
+      <span class="side-btn vol-up"></span>
+      <span class="side-btn vol-down"></span>
+      <span class="side-btn action"></span>
+      <div id="screen">
+        <div id="wallpaper"></div>
+        <div id="home" class="layer"></div>
+        <div id="apps" class="layer"></div>
+        <div id="lock" class="layer"></div>
+        <div id="overlay" class="layer"></div>
+        <div id="statusbar"></div>
+        <div id="island"></div>
+        <div id="home-indicator"><span></span></div>
+      </div>
+    </div>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+
+  <!-- Content (edit these, not the UI code) -->
+  <script src="data/config.js"></script>
+  <script src="data/mission.js"></script>
+  <script src="data/web.js"></script>
+  <script src="data/twitter.js"></script>
+  <script src="data/messages.js"></script>
+  <script src="data/notes.js"></script>
+  <script src="data/music.js"></script>
+
+  <!-- System -->
+  <script src="js/core.js"></script>
+  <script src="js/visitor-api.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/apps/safari.js"></script>
+  <script src="js/apps/twitter.js"></script>
+  <script src="js/apps/messages.js"></script>
+  <script src="js/apps/notes.js"></script>
+  <script src="js/apps/music.js"></script>
+  <script src="js/os.js"></script>
+  <script>WP.os.boot();</script>
+</body>
+</html>

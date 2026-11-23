@@ -1,0 +1,5 @@
+# Copy to .dev.vars only for local `wrangler dev`. .dev.vars is git-ignored — never commit it.
+# These are placeholders, not working values.
+SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_SECRET_KEY=sb_secret_REPLACE_ME
+SESSION_PEPPER=REPLACE_WITH_AT_LEAST_32_RANDOM_CHARACTERS

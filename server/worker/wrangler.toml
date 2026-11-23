@@ -1,0 +1,31 @@
+# Only needed if you deploy with the Wrangler CLI (`npx wrangler deploy`).
+# Dashboard users can ignore this file. Never put secrets here.
+name = "wphone-api"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+workers_dev = true
+
+[vars]
+# Replace YOUR-GITHUB-ID. Keep the localhost entries for local testing.
+ALLOWED_ORIGINS = "https://YOUR-GITHUB-ID.github.io,http://localhost:8765,http://127.0.0.1:8765"
+
+# Optional per-IP request limit (Workers Rate Limiting binding). Uncomment to enable.
+# [[ratelimits]]
+# name = "RATE_LIMITER"
+# namespace_id = "1001"
+# simple = { limit = 120, period = 60 }
+
+# Secrets are NOT set here. Use the dashboard, or:
+#   npx wrangler secret put SUPABASE_URL
+#   npx wrangler secret put SUPABASE_SECRET_KEY
+#   npx wrangler secret put SESSION_PEPPER
+
+# Logs. The app itself only logs fixed error codes (no IP, token, key, nickname or body).
+# Workers Logs also stores a per-request "invocation log" (Request/Response metadata) that the
+# Cloudflare docs do not itemise; it is turned off here so request details are not persisted.
+# Dashboard users: Worker → Settings → Observability → check the same settings there.
+[observability]
+enabled = true
+
+[observability.logs]
+invocation_logs = false

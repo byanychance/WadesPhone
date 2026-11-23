@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" preserveAspectRatio="xMidYMid slice">
+<defs><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 0.18 0"/></filter><radialGradient id="vg" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></radialGradient><filter id="b8"><feGaussianBlur stdDeviation="8"/></filter><filter id="b30"><feGaussianBlur stdDeviation="30"/></filter></defs>
+<rect width="1200" height="750" fill="#0a0a0c"/><path d="M300 750 L420 260 L780 260 L900 750Z" fill="#17181c"/><path d="M420 260 L780 260 L740 300 L460 300Z" fill="#26272c"/><rect x="500" y="300" width="200" height="300" fill="#000"/><rect x="510" y="310" width="90" height="290" fill="#1a1012"/><g filter="url(#b30)"><rect x="520" y="320" width="160" height="280" fill="#7a1a12" opacity=".35"/></g><text x="600" y="240" font-family="Arial" font-size="30" font-weight="700" fill="#6f6f6f" text-anchor="middle">SHELTER  B2</text><g transform="translate(600 600) scale(1.4)" fill="#000">
+<circle cx="7.2" cy="-92" r="11"/>
+<path d="M-2 -80 Q8 -84 18 -80 L16.8 -40 L8 -40 L14 0 L6 0 L0 -34 L-6 0 L-14 0 L-8 -40 L-7.2 -40 Z"/>
+<path d="M-2 -76 L-13.2 -52 L-9.2 -48 L2 -66 Z"/>
+<path d="M18 -76 L44.4 -60 L42.4 -55 L16 -66 Z"/>
+</g>
+<rect width="100%" height="100%" fill="url(#vg)"/>
+<rect width="100%" height="100%" filter="url(#g)"/>
+</svg>

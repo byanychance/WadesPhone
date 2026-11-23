@@ -1,0 +1,10 @@
+# Local secrets — never commit or deploy
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*
+*.local
+# Tooling
+node_modules/
+.wrangler/
