@@ -205,6 +205,7 @@
   OS.lock = () => {
     if (OS.state === 'locked') return;
     OS.state = 'locked';
+    Object.values(WP.apps).forEach((a) => a.onLock && a.onLock());
     document.body.dataset.state = 'locked';
     lock.classList.remove('unlocked');
     lock.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
@@ -225,6 +226,8 @@
         return `<svg viewBox="0 0 60 60" width="${s}" height="${s}"><defs><linearGradient id="ntg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe36a"/><stop offset="1" stop-color="#ffc800"/></linearGradient></defs><rect width="60" height="60" fill="#fdfdfd"/><rect width="60" height="17" fill="url(#ntg)"/><line x1="0" y1="17.5" x2="60" y2="17.5" stroke="#d9d9d9"/>${[27, 36, 45, 54].map((y) => `<line x1="0" y1="${y}" x2="60" y2="${y}" stroke="#dcdcdc" stroke-width="1.2"/>`).join('')}<g fill="#c8c8c8">${[6, 13, 20, 27, 34, 41, 48, 55].map((x) => `<circle cx="${x}" cy="7" r="1.1"/>`).join('')}</g></svg>`;
       case 'music':
         return `<svg viewBox="0 0 60 60" width="${s}" height="${s}"><defs><linearGradient id="mug" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fd5f7a"/><stop offset="1" stop-color="#fa233b"/></linearGradient></defs><rect width="60" height="60" fill="url(#mug)"/><path d="M24 40.5V20.5l17-3.5v19" fill="none" stroke="#fff" stroke-width="3.6" stroke-linejoin="round"/><ellipse cx="19.6" cy="41" rx="5.4" ry="4.6" fill="#fff"/><ellipse cx="36.6" cy="37" rx="5.4" ry="4.6" fill="#fff"/></svg>`;
+      case 'photos':
+        return `<svg viewBox="0 0 60 60" width="${s}" height="${s}"><rect width="60" height="60" fill="#fff"/><g transform="translate(30 30)" style="mix-blend-mode:multiply">${['#fdb827', '#f9802d', '#f2484f', '#c86dd7', '#7a7ff0', '#3fa9f5', '#4cd37b', '#a6d84a'].map((c, i) => `<ellipse cx="0" cy="-10" rx="7" ry="11" fill="${c}" opacity=".85" transform="rotate(${i * 45})"/>`).join('')}</g></svg>`;
       case 'twitter':
         return `<svg viewBox="0 0 60 60" width="${s}" height="${s}"><rect width="60" height="60" fill="#1d9bf0"/><g transform="translate(15 16.5) scale(1.25)" fill="#fff">${'<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>'}</g></svg>`;
       default:

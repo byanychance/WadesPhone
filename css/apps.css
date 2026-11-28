@@ -307,6 +307,38 @@
 .nt-photo img.img-missing { height: 180px; }
 .nt-new { color: #ffd60a; }
 
+/* ===================== Photos ===================== */
+.app-photos { --accent: var(--blue); }
+.ph-ri { color: var(--blue); width: 26px; display: grid; place-items: center; }
+.ph-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.ph-cell { aspect-ratio: 1; overflow: hidden; display: block; }
+.ph-cell:active { filter: brightness(.7); }
+.ph-lock { display: flex; flex-direction: column; align-items: center; padding-top: 24px; }
+.ph-lock-ic { color: var(--label2); }
+.ph-lock-t { font-size: 20px; font-weight: 600; margin: 14px 0 22px; }
+.ph-dots { display: flex; gap: 22px; margin-bottom: 14px; }
+.ph-say { min-height: 86px; width: 100%; padding: 0 32px; margin-bottom: 8px; text-align: center; line-height: 1.35; word-break: keep-all; text-wrap: balance; }
+.ph-say .en { font-size: 15px; }
+.ph-say .ko { font-size: 13px; color: var(--label2); margin-top: 3px; }
+.ph-dots i { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid #fff; }
+.ph-dots i.on { background: #fff; }
+.ph-pad { display: grid; grid-template-columns: repeat(3, 78px); gap: 16px 26px; }
+.ph-pad button { width: 78px; height: 78px; border-radius: 50%; background: var(--fill2); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.ph-pad button:active, .ph-pad button.pressed { background: rgba(255,255,255,.35); }
+.ph-pop { background: rgba(0,0,0,.5); }
+.ph-pop .alert { width: min(290px, calc(100% - 32px)); }
+.ph-pop .alert-body { padding: 20px; }
+.ph-pop .alert-body:has(.en.ph-lines) { padding: 20px 16px; } /* a little more room for fixed English lines */
+.ph-pop .alert-body p { margin: 0; line-height: 1.35; word-break: keep-all; overflow-wrap: break-word; text-wrap: balance; } /* balance: even lines, no lone last word */
+.ph-pop .alert-body p.ph-lines, .ph-say p.ph-lines { white-space: pre; } /* fixed lines: break only at the line breaks in the text */
+.ph-hidden .page-body { position: relative; }
+.ph-lock.ph-leaving { position: absolute; top: 0; left: 0; right: 0; background: var(--bg); pointer-events: none; } /* lifts off the album behind it */
+.ph-pop .alert-body .en { font-size: 15px; font-weight: 500; }
+.ph-pop .alert-body .ko { font-size: 14px; color: #d1d1d6; margin-top: 10px; }
+.ph-pad b { font-size: 34px; font-weight: 400; line-height: 1; }
+.ph-pad small { font-size: 10px; font-weight: 600; letter-spacing: .12em; height: 12px; margin-top: 2px; }
+.ph-pad .ph-del { background: none; font-size: 17px; }
+
 /* ===================== Music ===================== */
 .app-music { --accent: #fa2d48; }
 .mu-ri { color: #fa2d48; width: 26px; display: grid; place-items: center; }

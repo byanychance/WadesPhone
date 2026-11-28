@@ -19,7 +19,7 @@ WP_DATA.config = {
     home: 'assets/images/wallpaper/love-you-mean-pattern.jpg',
   },
   home: {
-    grid: ['twitter', 'notes'],
+    grid: ['photos', 'notes', 'twitter'],
     dock: ['safari', 'messages', 'music'],
   },
   // Home calendar widget: { event, time } for today's event. None now (the LUVIOGEN job is in the past).
